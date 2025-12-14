@@ -15,8 +15,8 @@ In real conditions, liquidity providers (market makers) are forced to choose the
 ### Fig. 1. Price trajectories
 
 A comparison of the "frequent" (blue) and "rare" (orange) hedging scenarios shows:
-- **Frequent**: a more jagged, volatile microstructure (noise from frequent trades is visible)
-- **Rare**: smoother with long-term drift (rare tipping events)
+- Frequent: a more jagged, volatile microstructure (noise from frequent trades is visible)
+- Rare: smoother with long-term drift (rare tipping events)
 
 ### Fig. 2. Distribution of transaction costs
 
@@ -24,11 +24,11 @@ A comparison of the "frequent" (blue) and "rare" (orange) hedging scenarios show
 - Blue (frequent): concentrated in the 2-4 cost range (narrow, stable distribution)
 - Orange (infrequent): Wide tail, peak at 0-1% (rare but major events)
 
-This confirms that with frequent hedging, costs ** are distributed more evenly**, which is important for risk planning.
+This confirms that with frequent hedging, costs are distributed more evenly, which is important for risk planning.
 
 ### Fig. 3. Volatility vs costs
 
-The graph "Realized Volatility vs Transaction Costs" shows **the absence of a clear pattern**: green bars (low cost) and red (high cost) overlap, which corresponds to p-value = 0.579 (Hypothesis 2).
+The graph "Realized Volatility vs Transaction Costs" shows the absence of a clear pattern: green bars (low cost) and red (high cost) overlap, which corresponds to p-value = 0.579 (Hypothesis 2).
 
 ### Fig. 4. Costs vs curtosis (H3)
 
