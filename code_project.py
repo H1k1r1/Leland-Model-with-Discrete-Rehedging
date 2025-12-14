@@ -7,9 +7,7 @@ import random
 np.random.seed(42)
 random.seed(42)
 
-# ============================================================
-# ЧАСТЬ 1: Black-Scholes и Leland Model с дискретным хеджем
-# ============================================================
+# Black-Scholes и Leland Model с дискретным хеджем
 
 def bs_call_price(S, K, r, T, sigma):
     if sigma <= 0 or T <= 0:
@@ -36,9 +34,7 @@ def leland_price_adjustment(gamma, sigma, rehedge_interval, transaction_cost):
     adjustment = gamma * sigma * np.sqrt(rehedge_interval) * transaction_cost / np.sqrt(np.pi)
     return adjustment
 
-# ============================================================
-# ЧАСТЬ 2: Мультиагентная симуляция с дискретным хеджем
-# ============================================================
+# Мультиагентная симуляция с дискретным хеджем
 
 def run_leland_simulation(
     T=1000,
@@ -149,9 +145,8 @@ def run_leland_simulation(
             logreturns.append(lr)
             returns.append(lr)
 
-    # ======================================================
-    #                     МЕТРИКИ
-    # ======================================================
+    # МЕТРИКИ
+    
     df = pd.DataFrame({
         "time": range(len(prices)),
         "price": prices,
@@ -176,9 +171,7 @@ def run_leland_simulation(
 
     return df, metrics
 
-# ============================================================
-# ЧАСТЬ 3: Трёхэтапное тестирование гипотез
-# ============================================================
+# Трёхэтапное тестирование гипотез
 
 print("=" * 70)
 print("LELAND MODEL WITH DISCRETE REHEDGING - HYPOTHESIS TESTING")
@@ -245,9 +238,7 @@ for i in range(35):
 
 metrics_mixed_df = pd.DataFrame(metrics_mixed)
 
-# ============================================================
-# ЧАСТЬ 4: Статистические тесты
-# ============================================================
+# Статистические тесты
 
 print("\n" + "=" * 70)
 print("STATISTICAL TESTS")
@@ -298,9 +289,7 @@ stat_t_H3, p_t_H3 = ttest_ind(
 tests["H3_corr_costs_kurtosis"] = (corr_H3, p_corr_H3)
 tests["H3_ttest_extremes"] = (stat_t_H3, p_t_H3)
 
-# ============================================================
-# ЧАСТЬ 5: Вывод результатов
-# ============================================================
+# Вывод результатов
 
 summary = pd.DataFrame({
     "scenario": ["frequent_hedging", "infrequent_hedging", "high_cost", "low_cost"],
@@ -339,9 +328,7 @@ tests_df = pd.DataFrame(
 )
 print(tests_df.to_string(index=False))
 
-# ============================================================
-# ЧАСТЬ 6: Графики для отчёта
-# ============================================================
+# Графики для отчёта
 
 print("\n=== Generating Plots ===")
 
@@ -408,4 +395,4 @@ axes[2, 1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n✓ All analyses completed successfully!")
+print("\n All analyses completed successfully!")
