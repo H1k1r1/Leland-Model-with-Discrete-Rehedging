@@ -28,9 +28,9 @@ This confirms that with frequent hedging, costs are distributed more evenly, whi
 
 ### Fig. 3. Volatility vs costs
 
-The graph "Realized Volatility vs Transaction Costs" shows the absence of a clear pattern: green bars (low cost) and red (high cost) overlap, which corresponds to p-value = 0.579 (Hypothesis 2).
+The graph "Realized Volatility vs Transaction Costs" shows the absence of a clear pattern: green bars (low cost) and red (high cost) overlap, which corresponds to p-value = 0.579.
 
-### Fig. 4. Costs vs curtosis (H3)
+### Fig. 4. Costs vs curtosis
 
 The scatter plot shows a negative trend (r = -0.410):
 - On the left (low cost): points at the top (high kurtosis)
