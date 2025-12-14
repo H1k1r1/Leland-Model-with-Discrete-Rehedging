@@ -1,4 +1,4 @@
-# Leland-Model-with-Discrete-Rehedging
+# Leland Model with Discrete Rehedging
 
 One of the central challenges in managing an options portfolio is optimizing the cost of dynamic hedging. The classic Black-Scholes model assumes the possibility of continuous cost-free reinsurance, which is unrealistic. Leland's model (1985) eliminates this limitation by introducing transaction costs and discrete hedging.
 
